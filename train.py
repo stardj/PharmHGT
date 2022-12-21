@@ -55,7 +55,7 @@ def train(data_args,train_args,model_args,seeds=[0,100,200,300,400]):
     for seed in seeds:
         torch.manual_seed(seed)
         for fold in range(train_args['num_fold']):
-            wandb.init(project='PharmHGT', entity='qiange',group=train_args["data_name"],name=f'seed{seed}_fold{fold}',reinit=True)
+            wandb.init(project='PharmHGT', entity='entity_name',group=train_args["data_name"],name=f'seed{seed}_fold{fold}',reinit=True)
             trainloader = create_dataloader(data_args,f'{seed}_fold_{fold}_train.csv',shuffle=True)
             valloader = create_dataloader(data_args,f'{seed}_fold_{fold}_valid.csv',shuffle=False,train=False)
             testloader = create_dataloader(data_args,f'{seed}_fold_{fold}_test.csv',shuffle=False,train=False)
