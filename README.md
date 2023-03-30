@@ -1,4 +1,4 @@
-# ![Mindrank logo](images/MindRank-06.png)PharmHGT
+# PharmHGT
 
 ## What's New:
 ***03/30/2023***
